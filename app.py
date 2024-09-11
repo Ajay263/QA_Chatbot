@@ -17,10 +17,21 @@ load_dotenv()
 GROQ_MODELS = ["mixtral-8x7b-32768", "llama-3.1-70b-versatile", "gemma2-9b-it", "llama3-70b-8192"]
 
 def print_log(message):
-    """Print log messages with a newline and flush."""
+    """Prints log messages with a newline and flushes the output buffer.
+
+    Args:
+        message (str): The message to be logged.
+    """
     print(message, flush=True)
 
 def main():
+    """Main function to run the Course Assistant application.
+
+    This function initializes the session state, handles user inputs such as course
+    selection, search type, and model selection. It processes user queries by sending
+    them to the assistant model and displays the answers. Additionally, it collects
+    feedback on the generated answers and saves the conversation history to a database.
+    """
     print_log("Starting the Course Assistant application")
     st.title("Course Assistant")
 
@@ -112,6 +123,12 @@ def main():
         col1, col2 = st.columns(2)
 
         def on_feedback_click(value):
+            """Handles feedback button click events by updating feedback count.
+
+            Args:
+                value (int): Feedback value where 1 represents positive feedback
+                             and -1 represents negative feedback.
+            """
             st.session_state.feedback_count += value
             try:
                 save_feedback(st.session_state.conversation_id, value)
