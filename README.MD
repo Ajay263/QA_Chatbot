@@ -1,5 +1,7 @@
 # Course Assistant for Data Bootcamp
 
+![Course Assistant img](https://github.com/Ajay263/QA_Chatbot/blob/main/img/logo.webp)
+
 ## Problem Statement
 Managing frequently asked questions (FAQs) and providing accurate, real-time responses during a Data Bootcamp can be challenging, especially as the volume of queries increases. Inconsistent or delayed answers can lead to confusion and disrupt the learning experience. This project aims to solve this problem by implementing a **Course Assistant** that uses a combination of **hybrid search** (vector search and text search) and **large language models (LLMs)** to deliver fast, relevant answers to students' questions. The solution ensures accuracy, provides timely responses, and facilitates monitoring and improvement of the assistant's performance.
 
