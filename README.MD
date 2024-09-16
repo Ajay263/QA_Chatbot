@@ -86,16 +86,19 @@ To deploy the Course Assistant on an EC2 instance using Docker:
 
 ## Project Interface
 Below is a screenshot of the interface where users can interact with the Course Assistant, ask questions, and receive responses:
-![alt](https://github.com/Ajay263/QA_Chatbot/blob/main/img/Grafana_dashboard_courseassistant1.png)
 
-![alt](https://github.com/Ajay263/QA_Chatbot/blob/main/img/Grafana_dashboard_courseassistant2.png)
+![alt](https://github.com/Ajay263/QA_Chatbot/blob/main/img/courseAssiatant_streamlit.png)
+![alt](https://github.com/Ajay263/QA_Chatbot/blob/main/img/courseAssiatant_streamlit2.png)
+
+
 
 <details> <summary>Click to view the image description</summary> The interface should show: - A **chat interface** where students can ask questions. - Real-time **query response** using the LLM. - A section for **user feedback** on the answers. </details>
 
 Model Monitoring Interface
 This is a screenshot of the model monitoring dashboard in Grafana, showing key metrics such as token usage, inference costs, and response times while the LLM is running in production:
-![alt](https://github.com/Ajay263/QA_Chatbot/blob/main/img/courseAssiatant_streamlit.png)
-![alt](https://github.com/Ajay263/QA_Chatbot/blob/main/img/courseAssiatant_streamlit2.png)
+![alt](https://github.com/Ajay263/QA_Chatbot/blob/main/img/Grafana_dashboard_courseassistant1.png)
+
+![alt](https://github.com/Ajay263/QA_Chatbot/blob/main/img/Grafana_dashboard_courseassistant2.png)
 
 <details> <summary>Click to view the image description</summary> The monitoring interface should show: - **Grafana Dashboard** tracking inference cost per query. - **Response time metrics** and **token usage** per session. - **Overall system health** including server load, memory usage, and container performance. </details>
 
