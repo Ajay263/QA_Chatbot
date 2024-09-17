@@ -66,27 +66,49 @@ To deploy the Course Assistant on an EC2 instance using Docker:
 1. **Launch an EC2 Instance**  
    - Provision an EC2 instance with at least **8 GB RAM** and **64 GB SSD**.
 
-2. **Install Docker**  
+2. **Install Docker docker compose**  
    ```bash
    sudo apt update
-   sudo apt install docker.io
+   sudo apt install -y docker.io
    sudo systemctl start docker
    sudo systemctl enable docker
+    ```
+
+ **Installing Docker Compose**
+ ```bash
+    
+    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    sudo chmod +x /usr/local/bin/docker-compose
+    
+    docker-compose --version
+ ```
+
+**Adding your user to the group**
+ ```bash
+    sudo usermod -a -G docker $(whoami)
+    newgrp docker
    ```
 
-3. **Clone the Repository**  
+3. **Clone the Repository**
+
    ```bash
-   git clone https://github.com/your-repo/course-assistant.git
-   cd course-assistant
+   git clone https://github.com/your-repo/course-assistant.git](https://github.com/Ajay263/QA_Chatbot.git
+   cd rag
    ```
+5. **Create a .env file**
+   
+   Create a file for your enviroment variables as shown below
 
-4. **Build and Run Docker Container**  
+
+
+5. **Build and Run Docker Container**
+   
    ```bash
-   docker build -t course-assistant .
-   docker run -d -p 8000:8000 course-assistant
+   docker-compose up 
    ```
 
-5. **Access the Application**  
+6. **Access the Application**
+7. 
    The Course Assistant will be available on `http://<EC2-IP>:8000`.
 
 ## Project Interface
