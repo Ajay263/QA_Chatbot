@@ -74,7 +74,7 @@ To deploy the Course Assistant on an EC2 instance using Docker:
    sudo systemctl enable docker
     ```
 
- **Installing Docker Compose**
+3. **Installing Docker Compose**
  ```bash
     
     sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -83,33 +83,36 @@ To deploy the Course Assistant on an EC2 instance using Docker:
     docker-compose --version
  ```
 
-**Adding your user to the group**
+4.**Adding your user to the group**
  ```bash
     sudo usermod -a -G docker $(whoami)
     newgrp docker
    ```
 
-3. **Clone the Repository**
+5. **Clone the Repository**
 
    ```bash
    git clone https://github.com/your-repo/course-assistant.git](https://github.com/Ajay263/QA_Chatbot.git
    cd rag
    ```
-5. **Create a .env file**
+6. **Create a .env file**
    
    Create a file for your enviroment variables as shown below
 
+   ![Course Assistant img](https://github.com/Ajay263/QA_Chatbot/blob/main/img/env.png)
+
+   
 
 
-5. **Build and Run Docker Container**
+7. **Build and Run Docker Container**
    
    ```bash
    docker-compose up 
    ```
 
-6. **Access the Application**
-7. 
-   The Course Assistant will be available on `http://<EC2-IP>:8000`.
+8. **Access the Application**
+
+   The Course Assistant will be available on `http://localhost:8502/`.
 
 ## Project Interface
 
@@ -121,9 +124,8 @@ Below is a screenshot of the interface where users can interact with the Course 
 
 
 
-<details> <summary>Click to view the image description</summary> The interface should show: - A **chat interface** where students can ask questions. - Real-time **query response** using the LLM. - A section for **user feedback** on the answers. </details>
 
-## Model Monitoring Interface
+9.## Model Monitoring Interface
 
 This is a screenshot of the model monitoring dashboard in Grafana, showing key metrics such as token usage, inference costs, and response times while the LLM is running in production
 
